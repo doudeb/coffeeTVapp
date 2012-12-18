@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport" id="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+        <meta name="viewport" content="width=320,user-scalable=false" />
+        <title>CoffeePoke</title>
+        <script src="static/js/vendor/jquery.min.js"></script>
+        <link href="static/css/style.css" rel="stylesheet" type="text/css">
+        </head>
+    <body>
+        Please enter you auth key : 
+        <input type="text" name="auth_token" id="auth_token">
+        <input type="submit" id="sendKey">
+        <script type="text/javascript">
+            if (localStorage.getItem("auth_token")) {
+                window.location.href = 'animation.html';
+            }
+
+            $("#sendKey").click(function (e) {
+                var key = $("#auth_token").val();
+                if (key.length > 0) {
+                    localStorage.setItem("auth_token", key);
+                    window.location.href = 'animation.html';
+                }
+            });
+        </script>
+    </body>
+</html>
