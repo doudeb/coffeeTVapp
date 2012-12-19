@@ -31,8 +31,8 @@ $(document).ready(function() {
 function loadPost (isReload) {
     $.ajax({
         type: 'GET'
-        //, url: "http://api.coffeepoke.com/services/api/rest/json"
-        , url: "http://api.coffee.enlightn.doudeb/services/api/rest/json"
+        , url: "http://api.coffeepoke.com/services/api/rest/json"
+        //, url: "http://api.coffee.enlightn.doudeb/services/api/rest/json"
         , dataType: 'json'
         , data: {
             method: 'coffee.getTVPosts'
