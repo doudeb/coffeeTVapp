@@ -16,7 +16,7 @@
 #usernameBlanc.animate { font-size:60px; line-height:100px;}
 #usernameBlanc.decalageTop { left:50px !important; }
 
-.roue {width: 120px; background:#fff; opacity:0;  margin-left:100px; margin-top:180px; z-index:40; }
+.roue {width: 120px; background:#fff; opacity:0;  margin-left:100px; margin-top:180px; z-index:40;backface-visibility:hidden;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden; }
 .roue span { color:#494949; white-space: nowrap }
 .roue span, #usernameBlanc { position:absolute;padding-left:20px; display:block; clear:both; -webkit-transform-origin:0 6px;-moz-transform-origin:0% 6px;-o-transform-origin:0 6px;transform-origin:0 6px;text-transform:uppercase; font-size:90%; }
 .roue span:nth-child(1) { padding-left:20px; -webkit-transform-origin:0% 0%;-moz-transform-origin:0px 0px;-o-transform-origin:0% 0%;transform-origin:0% 0%; }
