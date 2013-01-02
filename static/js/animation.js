@@ -122,7 +122,7 @@ function animerPost(id) {
 				$('#text').html(post.content.text.replace(/<br \/>/g," ").substr(0,140) + ' ...').show('blind');
 			else
 				$('#text').html(post.content.text.replace(/<br \/>/g," ")).show('blind');
-			$('#fond_icon_url').fadeIn();
+			$('#fond_icon_url').css('display','block');
 			//$('#friendly_time').html(post.content.friendly_time).show('blind');
 			if(post.attachment != false) {
 				$('#marges').removeClass('link image video');
@@ -162,7 +162,7 @@ function arreterRoue() {
 	$('#img, #usernameBlanc').removeClass("decalageTop");
 	$('#usernameBlanc').hide('blind');
 	setTimeout("decalerSpan()",1500);
-	$('#likes, #text, #friendly_time, #attachment, #fond_icon_url').hide('blind');
+	$('#likes, #text, #friendly_time, #attachment, #fond_icon_url').fadeOut();
 	$('#usernameBlanc').animate({ opacity:0},1500,null, function() {
 		$('#usernameBlanc').removeClass('animate');
 		$('#usernameBlanc').css('top','auto').css('left','auto');
