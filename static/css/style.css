@@ -1,4 +1,6 @@
+@font-face {font-family: 'exo';src: url('fonts/Exo-Bold.otf') format('truetype');font-weight: normal;font-style: normal;}
 body {background-color: #f80077}
+#cadre { font-family:'exo'; }
 @media screen and (min-width: 1500px){
     html, body {zoom:120%;}
 }
