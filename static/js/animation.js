@@ -95,7 +95,7 @@ function animationTxt(id) {
 
 	$('#usernameBlanc').animate({ opacity:1 },1000, function() {});
 	$('.roue').animate({ opacity:0 },1000, function() {
-		$('#usernameBlanc').animate({ top:'8px', left:0 },1000, function() {$('#usernameBlanc').addClass('animate');});
+		$('#usernameBlanc').animate({ top:'8px', left:'50px' },1000, function() {$('#usernameBlanc').addClass('animate');});
 	});
 	setTimeout('animerPost('+id+')',2000);
 }
@@ -111,7 +111,7 @@ function animerPost(id) {
 	$('#logo').animate({ opacity:1},1000, function() {
 		$('#icon_url').attr('src',post.user.icon_url);
         if (!_.isNull(post.user.cover_url)) {
-            $('#fond_icon_url').attr('src',post.user.cover_url);
+            $('#fond_icon_url').attr('src',post.user.cover_url).fadeIn();
         }
 		$('#img, #usernameBlanc').addClass("decalageTop");
 		$('#logo').animate({ opacity:1},1100, function() {
@@ -160,7 +160,7 @@ function animerPost(id) {
 function arreterRoue() {
 	$('.roue').removeClass('tournerRoue');
 	$('#img, #usernameBlanc').removeClass("decalageTop");
-	$('#usernameBlanc').hide('blind');
+	$('#usernameBlanc').hide();
 	setTimeout("decalerSpan()",1500);
 	$('#likes, #text, #friendly_time, #attachment, #fond_icon_url').fadeOut();
 	$('#usernameBlanc').animate({ opacity:0},1500,null, function() {
