@@ -42,14 +42,14 @@ function loadPost (isReload) {
         },
         success: function (response) {
             $('.roue').find('span').html('').attr('data-guid',null).attr('data-user',null);
-            if (!_.isUndefined(response.result.site_data.background_url)) {
+            /*if (!_.isUndefined(response.result.site_data.background_url)) {
                 $('body')
                     .css('background','url(' + response.result.site_data.background_url +')')
                     .css('background-repeat','no-repeat')
                     .css('background-attachment','fixed')
                     .css('-moz-background-size','cover')
                     .css('background-size','cover');
-            }
+            }*/
             objJson = [];
             decalage = 0;
             objJson = response.result.posts;
@@ -169,7 +169,7 @@ function arreterRoue() {
 		$('#usernameBlanc').show('slow');
 	});
 	$('#miniatureAtt, #titreAtt, #descAtt, #typeAtt').html('');
-	$('#cadre').animate({ backgroundColor: couleur[decalage] },1000);
+	$('#cadre, body').animate({ backgroundColor: couleur[decalage] },1000);
 }
 
 // Decalage de la roue (+1)
