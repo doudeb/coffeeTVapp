@@ -119,9 +119,9 @@ function animerPost(id) {
 			$('#usernameBlanc').addClass('transitionTxt'); // post.user.icon_url
 			//$('#likes').html(post.likes.total).show('blind');
 			if(post.content.text.length > 140)
-				$('#text').html(post.content.text.replace(/<br \/>/g," ").substr(0,140) + ' ...').show('blind');
+				$('#text').html(post.content.text.replace(/<br \/>/g," ").substr(0,140) + ' ...').fadeIn();
 			else
-				$('#text').html(post.content.text.replace(/<br \/>/g," ")).show('blind');
+				$('#text').html(post.content.text.replace(/<br \/>/g," ")).fadeIn();
 			$('#fond_icon_url').css('display','block');
 			//$('#friendly_time').html(post.content.friendly_time).show('blind');
 			if(post.attachment != false) {
