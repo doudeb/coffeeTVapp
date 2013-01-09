@@ -93,7 +93,7 @@ function flip() {
 function animationTxt(id) {
 	$('#usernameBlanc').html($('.roue span:first').attr('data-user'));
 
-	$('#usernameBlanc').animate({ opacity:1 },1000, function() {});
+	$('#usernameBlanc').animate({ opacity:1 },50);
 	$('.roue').animate({ opacity:0 },1000, function() {
 		$('#usernameBlanc').animate({ top:'8px', left:'50px' },1000, function() {$('#usernameBlanc').addClass('animate');});
 	});
@@ -116,7 +116,7 @@ function animerPost(id) {
 		$('#img, #usernameBlanc').addClass("decalageTop");
 		$('#logo').animate({ opacity:1},1100, function() {
 			var seconds = 6500;
-			$('#usernameBlanc').addClass('transitionTxt'); // post.user.icon_url
+			//$('#usernameBlanc').addClass('transitionTxt'); // post.user.icon_url
 			//$('#likes').html(post.likes.total).show('blind');
 			if(post.content.text.length > 140)
 				$('#text').html(post.content.text.replace(/<br \/>/g," ").substr(0,140) + ' ...').fadeIn();
