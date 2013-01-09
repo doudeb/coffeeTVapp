@@ -41,6 +41,9 @@ function loadPost (isReload) {
             , limit: 10
         },
         success: function (response) {
+            try {
+                navigator.splashscreen.hide();
+            } catch(e) {}
             $('.roue').find('span').html('').attr('data-guid',null).attr('data-user',null);
             /*if (!_.isUndefined(response.result.site_data.background_url)) {
                 $('body')
