@@ -2,7 +2,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.coffeeTVAPP"
-        version   = "0.9.3">
+        version   = "1.0.1">
     <name>CoffeePokeTV</name>
 
     <description>
@@ -15,12 +15,12 @@
 
     <feature name="http://api.phonegap.com/1.0/device" />
 
-    <preference name="phonegap-version" value="2.2.0" />
+    <preference name="phonegap-version" value="2.3.0" />
     <preference name="orientation"      value="default" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="true" />
     <preference name="hardwareAccelerated"       value="true" />
-    <preference name="splash-screen-duration" value="15000" />
+    <preference name="splash-screen-duration" value="2000" />
 
     <icon src="static/img/icon.png" />
     <icon src="static/img/icon-36.png"          gap:platform="android"    gap:density="ldpi" />
