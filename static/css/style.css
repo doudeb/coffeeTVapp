@@ -13,9 +13,9 @@ body {background-color: #f80077}
 #contenu { z-index:3; width:980px; height:660px; position:absolute; top:0; left:0; display:block }
 
 .postRoue { width:200px; margin:0 auto; margin-top:324px; }
-#usernameBlanc { z-index:-1; -webkit-transition: all 1s ease-in-out;-moz-transition: all 1s ease-in-out;-o-transition: all 1s ease-in-out;transition: all 1s ease-in-out;  color:#fff; margin-left:100px; z-index:33; opacity:0;white-space: nowrap}
-#usernameBlanc.animate { font-size:60px; line-height:100px;}
-#usernameBlanc.decalageTop {  }
+#usernameBlanc { z-index:-1; -webkit-transition: all 1s ease-in-out;-moz-transition: all 1s ease-in-out;-o-transition: all 1s ease-in-out;transition: all 1s ease-in-out;  color:#fff; margin-left:100px; z-index:33; opacity:0;white-space: nowrap;}
+#usernameBlanc.animate {}
+#usernameBlanc.decalageTop { top:8px; left:50px; font-size:60px; line-height:100px; }
 
 .roue {width: 120px; background:#fff; opacity:0;  margin-left:100px; margin-top:180px; z-index:40;backface-visibility:hidden;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden; }
 .roue span { color:#494949; white-space: nowrap }
@@ -38,6 +38,7 @@ body {background-color: #f80077}
 
 .tournerRoue {animation:boucle 5s ease-in-out 1;-moz-animation:boucle 5s ease-in-out 1;-webkit-animation:boucle 5s ease-in-out 1;-o-animation:boucle 5s ease-in-out 1; -webkit-transform-origin:0 6px;-moz-transform-origin:0 6px;-o-transform-origin:0 6px;transform-origin:0 6px;}
 .backFace {backface-visibility:hidden;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;}
+.hdwaccelerate {transform: translate3d(0,0,0);-webkit-transform: translate3d(0,0,0);-webkit-transform: translateZ(0);}
 .post { top:130px; position:absolute; left:45px; width:890px; }
 
 #img { width:100px; height:100px; position:absolute; top:10px; left:-110px;/* -webkit-transition: all 1s ease-in-out;-moz-transition: all 1s ease-in-out;-o-transition: all 1s ease-in-out;transition: all 1s ease-in-out;-webkit-transform-origin:0% 0%;-moz-transform-origin:0 0;-o-transform-origin:0% 0%;transform-origin:0% 0%;*/}

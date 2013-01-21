@@ -97,10 +97,12 @@ function animationTxt(id) {
 	$('#usernameBlanc').html($('.roue span:first').attr('data-user'));
 
 	$('#usernameBlanc').animate({ opacity:1 },50);
-	$('.roue').animate({ opacity:0 },1000, function() {
-		$('#usernameBlanc').animate({ top:'8px', left:'50px' },1000, function() {$('#usernameBlanc').addClass('animate');});
+	$('.roue').animate({ opacity:0 },2000, function() {
+        $('#usernameBlanc')
+            .hide()
+            .addClass('decalageTop');
+            animerPost(id);
 	});
-	setTimeout('animerPost('+id+')',2000);
 }
 
 // Animation du post
@@ -113,16 +115,17 @@ function animerPost(id) {
 
 	$('#logo').animate({ opacity:1},1000, function() {
 		$('#icon_url').attr('src',post.user.icon_url);
+        $('#usernameBlanc').fadeIn();
         if (!_.isNull(post.user.cover_url)) {
-            $('#fond_icon_url').attr('src',post.user.cover_url).fadeIn();
+            $('#fond_icon_url').attr('src',post.user.cover_url).show();
         }
-		$('#img, #usernameBlanc').addClass("decalageTop");
+		$('#img').addClass("decalageTop");
 		$('#logo').animate({ opacity:1},1100, function() {
 			var seconds = 6500;
 			//$('#usernameBlanc').addClass('transitionTxt'); // post.user.icon_url
 			//$('#likes').html(post.likes.total).show('blind');
-			if(post.content.text.length > 140)
-				$('#text').html(post.content.text.replace(/<br \/>/g," ").substr(0,140) + ' ...').fadeIn();
+			if(post.content.text.length > 250)
+				$('#text').html(post.content.text.replace(/<br \/>/g," ").substr(0,250) + ' ...').fadeIn();
 			else
 				$('#text').html(post.content.text.replace(/<br \/>/g," ")).fadeIn();
 			$('#fond_icon_url').css('display','block');
@@ -152,7 +155,7 @@ function animerPost(id) {
 				}
 				$('#attachment').fadeIn();
 			} else {
-				$('#attachment').hide('blind');
+				$('#attachment').hide();
 				setTimeout("arreterRoue()",seconds);
 			}
 			});
@@ -167,9 +170,7 @@ function arreterRoue() {
 	setTimeout("decalerSpan()",1500);
 	$('#likes, #text, #friendly_time, #attachment, #fond_icon_url').fadeOut();
 	$('#usernameBlanc').animate({ opacity:0},1500,null, function() {
-		$('#usernameBlanc').removeClass('animate');
-		$('#usernameBlanc').css('top','auto').css('left','auto');
-		$('#usernameBlanc').show('slow');
+		$('#usernameBlanc').show();
 	});
 	$('#miniatureAtt, #titreAtt, #descAtt, #typeAtt').html('');
 	$('#cadre, body').animate({ backgroundColor: couleur[decalage] },1000);
