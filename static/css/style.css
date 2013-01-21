@@ -15,7 +15,7 @@ body {background-color: #f80077}
 .postRoue { width:200px; margin:0 auto; margin-top:324px; }
 #usernameBlanc { z-index:-1; -webkit-transition: all 1s ease-in-out;-moz-transition: all 1s ease-in-out;-o-transition: all 1s ease-in-out;transition: all 1s ease-in-out;  color:#fff; margin-left:100px; z-index:33; opacity:0;white-space: nowrap;}
 #usernameBlanc.animate {}
-#usernameBlanc.decalageTop { top:8px; left:50px; font-size:60px; line-height:100px; }
+#usernameBlanc.decalageTop { top:-324px; left:-370px; font-size:60px; line-height:100px;position:absolute; }
 
 .roue {width: 120px; background:#fff; opacity:0;  margin-left:100px; margin-top:180px; z-index:40;backface-visibility:hidden;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden; }
 .roue span { color:#494949; white-space: nowrap }
@@ -41,8 +41,8 @@ body {background-color: #f80077}
 .hdwaccelerate {transform: translate3d(0,0,0);-webkit-transform: translate3d(0,0,0);-webkit-transform: translateZ(0);}
 .post { top:130px; position:absolute; left:45px; width:890px; }
 
-#img { width:100px; height:100px; position:absolute; top:10px; left:-110px;/* -webkit-transition: all 1s ease-in-out;-moz-transition: all 1s ease-in-out;-o-transition: all 1s ease-in-out;transition: all 1s ease-in-out;-webkit-transform-origin:0% 0%;-moz-transform-origin:0 0;-o-transform-origin:0% 0%;transform-origin:0% 0%;*/}
-#img.decalageTop { left:45px; margin-top: 25px;}
+#img { display:none;width:100px; height:100px; position:absolute; top:10px; left:-110px;/* -webkit-transition: all 1s ease-in-out;-moz-transition: all 1s ease-in-out;-o-transition: all 1s ease-in-out;transition: all 1s ease-in-out;-webkit-transform-origin:0% 0%;-moz-transform-origin:0 0;-o-transform-origin:0% 0%;transform-origin:0% 0%;*/}
+#img.decalageTop { left:-360px; margin-top: -310px;position:absolute;display:block}
 #text { font-size:45px; color:#FFFFFF ; line-height: 45px;}
 .text-container { height: 200px; vertical-align: middle;display : table-cell;}
 #friendly_time { font-size:26px; color:#fff; top:89px; left:173px; position:absolute}
