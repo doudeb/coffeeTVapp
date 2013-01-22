@@ -13,7 +13,7 @@ body {background-color: #f80077}
 #contenu { z-index:3; width:980px; height:660px; position:absolute; top:0; left:0; display:block }
 
 .postRoue { width:200px; margin:0 auto; margin-top:324px; }
-#usernameBlanc { z-index:-1; -webkit-transition: all 1s ease-in-out;-moz-transition: all 1s ease-in-out;-o-transition: all 1s ease-in-out;transition: all 1s ease-in-out;  color:#fff; margin-left:100px; z-index:33; opacity:0;white-space: nowrap;}
+#usernameBlanc { z-index:-1;color:#fff; margin-left:100px; z-index:33; opacity:0;white-space: nowrap;}
 #usernameBlanc.animate {}
 #usernameBlanc.decalageTop { top:-324px; left:-370px; font-size:60px; line-height:100px;position:absolute; }
 
