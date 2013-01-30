@@ -61,8 +61,8 @@ function animationTxt(id) {
 	$('.roue').animate({ opacity:0 },1500, function() {
         $('#usernameBlanc, #img')
             .hide()
-            .addClass('decalageTop')
-            .fadeIn();
+            .addClass('decalageTop');
+        $('#usernameBlanc').fadeIn();
             setTimeout("animerPost(" + id + ")",1500);
 	});
 }
@@ -76,6 +76,7 @@ function animerPost(id) {
     if (!_.isNull(post.user.cover_url)) {
         $('#fond_icon_url').attr('src',post.user.cover_url).show();
     }
+    $('#img').fadeIn();
     if(post.content.text.length > 250)
         $('#text').html(post.content.text.replace(/<br \/>/g," ").substr(0,250) + ' ...').fadeIn();
     else
