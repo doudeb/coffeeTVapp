@@ -1,7 +1,7 @@
 var decalage = 0
     , nb = -1
     , objJson
-    , couleur = new Array('#ff9c00','#ffd700','#3bd322','#419ac2','#f80077','#ff9c00','#ffd700','#3bd322','#419ac2','#f80077')
+    , couleur = new Array('#ED1564','#ffd700','#3bd322','#419ac2','#f80077','#ff9c00','#ffd700','#3bd322','#419ac2','#f80077')
     , auth_token = localStorage.getItem("auth_token");
 
 if (!auth_token) {
